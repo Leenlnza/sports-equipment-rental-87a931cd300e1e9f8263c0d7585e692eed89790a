@@ -81,7 +81,7 @@ export default function EquipmentPage() {
     }
 
     try {
-      // เช็คจำนวนอุปกรณ์ที่ผู้ใช้ยืมอยู่แล้ว
+      // เช็คจำนวนอุปกรณ์ที่ผู้ใช้ยืมแล้ว
       const checkResponse = await fetch("/api/borrow/check", {
         method: "GET",
         headers: {
@@ -132,16 +132,16 @@ export default function EquipmentPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-red-600 flex items-center justify-center">
+      <div className="min-h-screen bg-sky-600 flex items-center justify-center">
         <div className="text-white">กำลังโหลด...</div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-400">
+    <div className="min-h-screen bg-gray-200">
       {/* Header */}
-      <header className="bg-red-600 border-b border-gray-700">
+      <header className="bg-[#799EFF] border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex items-center gap-4">
           <Link href="/dashboard">
             <Button className="hover:bg-gray-800 hover:text-white" variant="outline" size="sm">

@@ -107,7 +107,7 @@ export default function DashboardPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-red-600 flex items-center justify-center">
+      <div className="min-h-screen bg-sky-600 flex items-center justify-center">
         <div className="text-white">กำลังโหลดข้อมูล...</div>
       </div>
     )
@@ -115,7 +115,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      <header className="bg-red-600 border-b border-gray-700">
+      <header className="bg-[#799EFF] border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="text-2xl">⚽</div>
@@ -145,7 +145,7 @@ export default function DashboardPage() {
           <p className="text-black">จัดการการยืมอุปกรณ์กีฬาของคุณ</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <Link href="/equipment">
             <Card className="hover:shadow-lg transition-shadow cursor-pointer  border-2 border-black">
               <CardHeader className="text-center">
@@ -170,19 +170,7 @@ export default function DashboardPage() {
             </Card>
           </Link>
 
-          <Link href="/profile">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer  border-2 border-black">
-              <CardHeader className="text-center">
-                <div className="h-12 w-12 text-purple-600 mx-auto mb-2 flex items-center justify-center text-2xl">
-                  👤
-                </div>
-                <CardTitle className="text-lg">เข้าสู่ระบบใหม่</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 text-center">เข้าสู่ระบบใหม่อีกครั้งหนึ่ง กรณีเกิดเป็นปัญหา</p>
-              </CardContent>
-            </Card>
-          </Link>
+          
 
           <Card className="bg-gradient-to-br from-orange-50 to-red-50  border-2 border-black">
             <CardHeader className="text-center">
@@ -190,21 +178,21 @@ export default function DashboardPage() {
               <CardTitle className="text-lg">อุปกรณ์ที่ยืม</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600 text-center">อุปกรณ์ที่ยืมอยู่ในขณะนี้</p>
+              <p className="text-sm text-gray-600 text-center">อุปกรณ์ที่ยืมในขณะนี้</p>
             </CardContent>
           </Card>
         </div>
 
         <Card className="border-2 border-black">
           <CardHeader>
-            <CardTitle>อุปกรณ์ที่ยืมอยู่</CardTitle>
-            <CardDescription>รายการอุปกรณ์ที่คุณยืมอยู่ในขณะนี้</CardDescription>
+            <CardTitle>อุปกรณ์ที่ยืม</CardTitle>
+            <CardDescription>รายการอุปกรณ์ที่คุณยืมในขณะนี้</CardDescription>
           </CardHeader>
           <CardContent>
             {borrowedItems.length === 0 ? (
               <div className="text-center py-8">
                 <Package className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                <p className="text-gray-600">ไม่มีอุปกรณ์ที่ยืมอยู่</p>
+                <p className="text-gray-600">ไม่มีอุปกรณ์ที่ยืม</p>
                 <Link href="/equipment">
                   <Button className="mt-4">
                     <Plus className="h-4 w-4 mr-2" />
@@ -223,11 +211,9 @@ export default function DashboardPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Badge variant="default" className="bg-blue-100 text-blue-800">
-                        ยืมอยู่
+                        ยืม
                       </Badge>
-                      <Button size="sm" variant="outline" onClick={() => handleReturn(item._id)}>
-                        คืนอุปกรณ์
-                      </Button>
+                      
                     </div>
                   </div>
                 ))}

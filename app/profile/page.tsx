@@ -159,7 +159,7 @@ export default function ProfilePage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-sky-600 flex items-center justify-center">
         <div className="text-white">กำลังโหลด...</div>
       </div>
     )

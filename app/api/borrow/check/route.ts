@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
     const db = client.db("lcc_sports_new")
     const borrowRecords = db.collection("borrow_records")
 
-    // นับจำนวนอุปกรณ์ที่ผู้ใช้ยืมอยู่ (status = "borrowed")
+    // นับจำนวนอุปกรณ์ที่ผู้ใช้ยืม (status = "borrowed")
     const borrowedCount = await borrowRecords.countDocuments({
       userId,
       status: "borrowed",

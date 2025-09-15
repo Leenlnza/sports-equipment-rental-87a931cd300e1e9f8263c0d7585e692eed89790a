@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     const borrowRecords = db.collection("borrow_records")
     const equipments = db.collection("equipment")
 
-    // เช็คจำนวนอุปกรณ์ที่ผู้ใช้ยืมอยู่
+    // เช็คจำนวนอุปกรณ์ที่ผู้ใช้ยืม
     const borrowedCount = await borrowRecords.countDocuments({
       userId,
       status: "borrowed",

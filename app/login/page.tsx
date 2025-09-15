@@ -50,8 +50,13 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
+   <div
+      className="min-h-screen bg-cover bg-center flex items-center justify-center p-4 relative"
+      style={{ backgroundImage: "url('/8061.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      
+      <Card className="w-full max-w-md relative z-10 backdrop-blur-sm">
         <CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="text-2xl">⚽</div>
